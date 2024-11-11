@@ -28,7 +28,10 @@ export function Button({ text, ...props }: ButtonProps) {
       {...props}
     >
       {props.disabled ? (
-        <Loader2 className="size-4 animate-spin text-white" />
+        <Loader2
+          className="size-4 animate-spin text-white"
+          data-testid="loader"
+        />
       ) : (
         <span
           aria-disabled={props.disabled}
