@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${firaCode.variable}  antialiased`}>{children}</body>
+      <body className={`${firaCode.variable} antialiased`}>{children}</body>
     </html>
   );
 }

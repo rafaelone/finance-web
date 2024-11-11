@@ -26,12 +26,24 @@ const config: Config = {
       fontFamily: {
         firacode: 'var(--font-fira-code)',
       },
-
+      backgroundSize: {
+        gradientMove: '200% 200%',
+      },
       fontWeight: {
         light: '300',
         regular: '400',
         semiBold: '600',
         bold: '700',
+      },
+      keyframes: {
+        grandientMove: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+      },
+      animation: {
+        gradientMove: 'grandientMove 2s ease infinite',
       },
     },
   },

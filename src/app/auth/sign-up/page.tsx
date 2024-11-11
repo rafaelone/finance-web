@@ -1,7 +1,7 @@
-import { Button } from '@/components/button'
-import { Input } from '@/components/input'
+import { Button } from '@/components/button';
+import { Input } from '@/components/input';
 
-import Link from 'next/link'
+import Link from 'next/link';
 
 export default async function SignUp() {
   return (
@@ -28,5 +28,5 @@ export default async function SignUp() {
         Return to sign in
       </Link>
     </div>
-  )
+  );
 }

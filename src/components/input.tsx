@@ -1,8 +1,8 @@
-import type { ComponentProps } from 'react'
+import type { ComponentProps } from 'react';
 
 type InputProps = ComponentProps<'input'> & {
-  hasError?: boolean
-}
+  hasError?: boolean;
+};
 
 export function Input({ hasError, ...rest }: InputProps) {
   return (
@@ -13,9 +13,9 @@ export function Input({ hasError, ...rest }: InputProps) {
     >
       <input
         data-error={hasError}
-        className="placeholder:text-shadow w-full bg-transparent font-firacode text-white caret-white outline-none placeholder:font-bold placeholder:tracking-[4px] placeholder:text-dark-100 data-[error=true]:text-red-100"
+        className="placeholder:text-shadow w-full bg-transparent font-firacode text-white caret-white outline-none placeholder:font-bold placeholder:tracking-[4px] placeholder:text-dark-100"
         {...rest}
       />
     </label>
-  )
+  );
 }
