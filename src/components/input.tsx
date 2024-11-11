@@ -9,6 +9,7 @@ export function Input({ hasError, ...rest }: InputProps) {
     <label
       htmlFor={rest.name}
       data-error={hasError}
+      data-testid="label-test"
       className="group flex h-11 w-full items-center gap-3 rounded-xl border border-grey bg-black px-4 transition-all focus-within:border-white data-[error=true]:border-red-100"
     >
       <input
