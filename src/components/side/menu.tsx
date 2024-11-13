@@ -27,10 +27,13 @@ export function Menu() {
           </ul>
         </nav>
       </div>
-      <button className="mt-auto flex h-[53px] w-full items-center justify-center gap-2 border-t border-white font-firacode text-xl font-bold text-white">
+      <a
+        href="/api/auth/sign-out"
+        className="mt-auto flex h-[53px] w-full items-center justify-center gap-2 border-t border-white font-firacode text-xl font-bold text-white"
+      >
         Exit
         <LogOut className="size-5" />
-      </button>
+      </a>
     </aside>
   );
 }
