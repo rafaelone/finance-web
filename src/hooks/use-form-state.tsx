@@ -22,6 +22,7 @@ export function useFormState(
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
     const form = event.currentTarget;
     const data = new FormData(form);
 

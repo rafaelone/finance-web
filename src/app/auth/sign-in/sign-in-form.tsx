@@ -6,7 +6,8 @@ import { useFormState } from '@/hooks/use-form-state';
 import Link from 'next/link';
 import { signInWithEmailAndPassword } from './actions';
 import { useRouter } from 'next/navigation';
-import { AlertCircle } from 'lucide-react';
+
+import { Alert } from '@/components/alert';
 
 export function SignInForm() {
   const router = useRouter();
@@ -21,17 +22,7 @@ export function SignInForm() {
   return (
     <>
       {success === false && message && (
-        <div className="mb-4 flex items-center gap-2">
-          <AlertCircle className="size-6 text-red-200" />
-          <div>
-            <strong className="text-md font-firacode font-bold text-red-200">
-              Sign in failed!
-            </strong>
-            <p className="font-firacode text-sm font-bold text-red-200">
-              {message}
-            </p>
-          </div>
-        </div>
+        <Alert title="Sign in failed!" message={message} />
       )}
       <form
         className="flex w-full flex-col items-center"
