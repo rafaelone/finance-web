@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 
 import { isAuthenticated } from '@/auth/auth';
 import { Menu } from '@/components/side/menu';
+import { Header } from '@/components/header';
 
 export default async function AppLayout({
   children,
@@ -15,9 +16,12 @@ export default async function AppLayout({
   }
 
   return (
-    <div className="flex min-h-screen">
+    <div className="relative flex min-h-screen">
       <Menu />
-      {children}
+      <div className="flex-1">
+        <Header />
+        {children}
+      </div>
       {/* {sheet} */}
     </div>
   );

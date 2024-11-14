@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        md: { max: '1024px' },
+      },
       colors: {
         dark: {
           100: '#111111',

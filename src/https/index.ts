@@ -1,4 +1,9 @@
-export function api(path: string, init: RequestInit) {
+import { getCookie, type CookiesFn } from 'cookies-next';
+
+export async function api(path: string, init: RequestInit) {
+  let cookieStore: CookiesFn | undefined;
+  let Authorization = '';
+
   const baseUrl =
     process.env.NODE_ENV === 'production'
       ? `${process.env.NEXTAUTH_URL}`
@@ -8,5 +13,22 @@ export function api(path: string, init: RequestInit) {
 
   const url = new URL(apiPrefix.concat(path), baseUrl);
 
-  return fetch(url, init);
+  if (typeof window === 'undefined') {
+    const { cookies: serverCookies } = await import('next/headers');
+    cookieStore = serverCookies;
+  }
+
+  const token = await getCookie('finances', { cookies: cookieStore });
+
+  if (token) {
+    Authorization = `Bearer ${token}`;
+  }
+
+  return fetch(url, {
+    ...init,
+    headers: {
+      ...init.headers,
+      Authorization,
+    },
+  });
 }

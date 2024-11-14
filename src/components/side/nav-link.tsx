@@ -17,7 +17,7 @@ export function NavLink(props: NavLinkProps) {
     >
       <Link
         data-current={isCurrent}
-        className="z-10 flex h-12 w-full items-center justify-start gap-2 rounded-full px-4 font-firacode text-xs font-bold tracking-wider text-grey data-[current=true]:bg-dark-100 data-[current=true]:text-white"
+        className="z-10 flex h-12 w-full items-center justify-start gap-2 rounded-full px-4 font-firacode text-xs font-bold tracking-wider text-grey data-[current=true]:bg-dark-100 data-[current=true]:text-white md:flex-col md:items-center md:justify-center md:gap-1"
         {...props}
       />
     </li>
