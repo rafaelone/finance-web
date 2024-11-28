@@ -4,7 +4,7 @@ import { LoadingUserDetail } from './loading-user-detail';
 
 export function Header() {
   return (
-    <header className="flex h-[100px] w-full items-center border-b border-grey px-10">
+    <header className="flex h-[100px] w-full items-center border-b border-grey px-10 md:px-4">
       <div>
         <Suspense fallback={<LoadingUserDetail />}>
           <UserDetail />

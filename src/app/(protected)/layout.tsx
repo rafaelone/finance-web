@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 import { isAuthenticated } from '@/auth/auth';
 import { Menu } from '@/components/side/menu';
 import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 export default async function AppLayout({
   children,
@@ -20,9 +21,11 @@ export default async function AppLayout({
       <Menu />
       <div className="flex-1">
         <Header />
-        {children}
+        <div className="p-10 md:mb-2 md:h-[calc(100%-174px)] md:p-4">
+          {children}
+        </div>
+        <Footer />
       </div>
-      {/* {sheet} */}
     </div>
   );
 }

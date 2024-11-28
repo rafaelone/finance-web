@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Fira_Code as fontFireCode } from 'next/font/google';
 import './globals.css';
+import { Providers } from './providers';
 
 const firaCode = fontFireCode({
   subsets: ['latin'],
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${firaCode.variable} antialiased`}>{children}</body>
+      <body className={`${firaCode.variable} antialiased`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

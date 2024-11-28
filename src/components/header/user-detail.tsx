@@ -3,9 +3,7 @@ import { getProfile } from '@/https/getProfile';
 async function getUserData() {
   try {
     const data = await getProfile();
-    await new Promise((resolve) => {
-      setTimeout(resolve, 5000);
-    });
+
     return data.user;
   } catch (err) {
     return null;
@@ -14,6 +12,8 @@ async function getUserData() {
 
 export async function UserDetail() {
   const user = await getUserData();
+
+  console.log(user);
 
   return (
     <div className="flex flex-col gap-3">
