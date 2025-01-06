@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Finance Web
 
-## Getting Started
+**Finance Web** é um sistema de controle financeiro pessoal, projetado para gerenciar despesas, receitas e acompanhar o saldo de forma simples e eficiente. Este projeto utiliza tecnologias modernas como **Next.js**, **Tailwind CSS** e **TypeScript** para entregar uma interface elegante e responsiva.
 
-First, run the development server:
+## 🚀 Tecnologias Utilizadas
 
+- **Next.js**: Framework React para renderização server-side e client-side.
+- **TypeScript**: Linguagem com tipagem estática para maior segurança no desenvolvimento.
+- **Tailwind CSS**: Framework de design para criar interfaces responsivas e modernas.
+- **Jest** e **React Testing Library**: Para testes unitários e de integração.
+- **Playwright**: Ferramenta para testes End-to-End (E2E).
+- **Docker**: Para containerização do ambiente de desenvolvimento.
+
+
+## 📂 Funcionalidades
+
+- **Dashboard interativa**: Visualize receitas, despesas e saldo atualizado em tempo real.
+- **Gerenciamento de transações**: Adicione, edite e exclua transações financeiras.
+- **Categorias personalizáveis**: Organize suas transações em categorias específicas.
+- **Histórico detalhado**: Acompanhe suas finanças com relatórios detalhados.
+- **Design responsivo**: Interface adaptada para dispositivos móveis e desktops.
+
+
+
+## 🛠️ Instalação e Uso
+
+### Pré-requisitos
+
+- **Node.js** (v18+)
+- **Docker** (opcional, para rodar a aplicação em contêineres)
+
+### Passos para execução
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/rafaelone/finance-web.git
+   cd finance-web
+   ```
+
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
+
+3. **Configure as variáveis de ambiente**:
+   Renomeie o arquivo `.env.example` para `.env` e preencha as variáveis necessárias.
+
+4. **Inicie a aplicação**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Acesse a aplicação**:
+   Abra o navegador e acesse `http://localhost:3000`.
+
+
+
+## 🧪 Testes
+
+O projeto utiliza **Jest**, **React Testing Library** e **Playwright** para garantir a qualidade do código.
+
+### Executar testes unitários:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Executar testes de integração:
+```bash
+npm run test:integration
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Executar testes End-to-End:
+```bash
+npm run test:e2e
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Verificar a cobertura de testes:
+```bash
+npm run test:coverage
+```
 
-## Learn More
+## 📖 Documentação
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [SST Documentation](https://sst.dev/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🤝 Contribuindo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contribuições são bem-vindas! Para contribuir:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Faça um fork do projeto.
+2. Crie uma branch para sua funcionalidade:
+   ```bash
+   git checkout -b feature/nova-funcionalidade
+   ```
+3. Commit suas alterações:
+   ```bash
+   git commit -m "feat: descrição da nova funcionalidade"
+   ```
+4. Envie sua branch:
+   ```bash
+   git push origin feature/nova-funcionalidade
+   ```
+5. Abra um Pull Request.
+
+
+
+## 📝 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE). Sinta-se à vontade para usá-lo e adaptá-lo conforme necessário.
+
+
+
+## 👨‍💻 Autor
+
+Desenvolvido por [Rafael One](https://github.com/rafaelone). Se você gostou deste projeto, deixe uma ⭐ no repositório para apoiar o desenvolvimento!
+
+
+Se precisar de ajustes ou adicionar mais informações específicas, é só avisar! 🚀
